@@ -3,11 +3,24 @@ let numbers = [6, 8, 10, 12, 43, 56, 98];
 let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
-
+let collection = numbers.concat(userIds);
+console.log(collection);
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
-
+let evenCollection = [];
+for (let number of collection) {
+  if (number % 2 === 0) {
+    evenCollection.push(number);
+  }
+  console.log(evenCollection);
+}
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
-
+let oddCollection = [];
+for (let number of collection) {
+  if (number % 2 !== 0) {
+    oddCollection.push(number);
+  }
+  console.log(oddCollection);
+}
 /*
   @param means parameter
 
@@ -24,8 +37,12 @@ let userIds = [1230, 234, 1278, 984, 763, 900];
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times() {
-  // Your code
+function times(times1, character) {
+  if (time1 < 1) return [];
+  let final = [];
+  for (let i = 0; i < time1; i++) {
+    final.push(character);
+  }
 }
 
 // Uncomment the code below and test the output
@@ -38,7 +55,6 @@ function times() {
 /*
 
  5. Write a function named revert which reverts the element of the input array. 
-
   @param arr (array)
   @return array
 
@@ -48,10 +64,14 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
-  // your code
-}
+function revert(arr) {
+  let emptyArr = [];
 
+  for (let i = arr.length - 1; i >= 0; i--) {
+    emptyArr.push(arr[i]);
+  }
+  return emptyArr;
+}
 // Uncomment the code below and test the output
 // console.log(revert([1, 2, 3, 4])); // [4, 3, 2, 1]
 // console.log(revert(['a', 'd', 'c', 'b'])); // ['b', 'c', 'd', 'a']
@@ -70,9 +90,7 @@ function revert() {
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear() {
-  // your code
-}
+function clear(arr) 
 
 // Uncomment the code below and test the output
 // console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
@@ -93,8 +111,12 @@ function clear() {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
-  // your code
+function arrayToObj(array) {
+let final ={}
+for (let i = 0; i < array.length; i ++){
+  final[i] = array[i]
+}
+return final;
 }
 
 // Uncomment the code below and test the output

@@ -49,5 +49,6 @@ var user = {
 user.brothers = brothers;
 brothers.push("Robb");
 console.log(user.brothers === brothers); //True
-console.log(user.brothers.length === brothers.length); //2. True
+console.log(user.brothers.length === brothers.length);
+// True
 ```
